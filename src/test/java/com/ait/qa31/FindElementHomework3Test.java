@@ -1,5 +1,15 @@
 package com.ait.qa31;
 
+/**
+ * Homework
+ * Создайте, пожалуйста, новый тестовый класс и
+ * найти 10 элементов на странице.
+ * Для этого следует создать два тестовых метода:
+ * один будет искать элементы по cssSelector,
+ * а второй те же самые элементы, но по xPath.
+ *
+ */
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
