@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class FindElementHomework3 {
+public class FindElementHomework3Test {
     WebDriver driver;
 
 
