@@ -1,20 +1,26 @@
 package com.ait.qa31;
+/**
+ *
+ * В проекте FirstSeleniumProject создайте,
+ * пожалуйста, родительский класс TestBase и его
+ * наследник CreateAccountTests с позитивным
+ * методом регистрации на сайте
+ *
+ */
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.time.Duration;
 
 public class CreateAccountTests extends TestBase {
-
     @Test
     public void createNewAccountPositiveTest() {
         var registerLink = driver.findElement(By.cssSelector("[href='/register']"));
         highlightElement(registerLink);
         driver.findElement(By.cssSelector("[href='/register']")).click();
-//        driver.findElement(By.cssSelector("[for='FirstName']")).click();
+//      driver.findElement(By.cssSelector("[for='FirstName']")).click();
         driver.findElement(By.cssSelector("[name='FirstName']")).clear();
         driver.findElement(By.cssSelector("[name='FirstName']")).sendKeys("Evgenii");
         driver.findElement(By.cssSelector("[name='LastName']")).clear();
@@ -42,7 +48,6 @@ public class CreateAccountTests extends TestBase {
         highlightElement(loginButton);
         logInToAccountPositiveTest(loginButton);
     }
-
     public void logInToAccountPositiveTest(WebElement login) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
             login.submit();
@@ -50,5 +55,4 @@ public class CreateAccountTests extends TestBase {
         highlightElement(customerLink);
         Assert.assertTrue(isElementPresent(By.xpath("//a[.='"+EMAIL+"']")));
     }
-
 }
