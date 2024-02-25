@@ -33,7 +33,7 @@ public class CreateAccountTests extends TestBase {
         var loginLink = driver.findElement(By.cssSelector("[href='/login']"));
         highlightElement(loginLink);
         loginLink.click();
-// check autofocus too
+// autofocus
         driver.findElement(By.cssSelector("[name='Email']")).clear();
         driver.findElement(By.cssSelector("[name='Email']")).sendKeys(EMAIL);
         driver.findElement(By.cssSelector("[name='Password']")).clear();
